@@ -8,12 +8,13 @@ Feature: The calculator application
         Then Expect "<result>"
 
         Examples:
-            | first | second | operator       | result |
-            | 5     | 3      | ADDITION       | 8      |
-            | 9     | 3      | DIVISION       | 3      |
-            | 0,7   | 1,5    | MULTIPLICATION | 1,05   |
-            | a     | 7      | SUBTRACTION    | NaN    |
-            | G     | 26     | DIVISION       | NaN    |
-            | -7    | 0      | DIVISION       | NaN    |
-            | 635   | 13     | MODULO         | 11     |
-            |       | 2      | ADDITION       | NaN    |
+            | first | second | operator       | result    |
+            | 5     | 3      | ADDITION       | 8         |
+            | 9     | 3      | DIVISION       | 3         |
+            | 0,7   | 1,5    | MULTIPLICATION | 1,05      |
+            | a     | 7      | SUBTRACTION    | NaN       |
+            | G     | 26     | DIVISION       | NaN       |
+            | -7    | 0      | DIVISION       | -Infinity |
+            | 635   | 13     | MODULO         | 11        |
+            |       | 2      | ADDITION       | NaN       |
+            | 1     | ∞      | MULTIPLICATION | Infinity  |
